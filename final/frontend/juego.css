@@ -1,0 +1,100 @@
+html{
+    background-color: lightblue;
+}
+
+#todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+h1#titulo{
+	text-align: center; 
+	font-size: 2rem;
+	padding: 10px 20px;
+	margin: 20px auto; 
+}
+
+#instrucciones{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2#marcadores{
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+  }
+
+.cajaizquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cajaderecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+/*.basuras{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 10px; /* Espacio entre los elementos */
+    /*margin: 20px auto; /* Centra todo el contenedor */ 
+/*}*/
+
+.basuras {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: auto auto; /* Dos filas */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 20px; /* Espaciado entre contenedores */
+    width: 50%; /* Ajusta el ancho total */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.fotoslugares{
+    height: 200px;
+    width: 250px;
+}
+
+.fotoscontenedores{ 
+    height: 150px;
+    width: 150px;
+}
+
+#contOrganico{
+    height: 100px;
+    width: 100px;
+}
+
+#organico {
+    margin-left: 35px; /* margen a la izquierda, asi desplazo a la derecha */
+}
+
+#fotocasa, #fotocolegio{
+    margin-right: 225px;
+
+} 
+
+#fotociudad, #fotoindustria{
+    margin-left: 225px;
+}
+
+#reset{
+    display: block;
+    margin: auto;
+}

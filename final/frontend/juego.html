@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+  		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<title>Hora de Reciclar</title>
+		
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="juego.css">
+	</head>
+	<body>
+		<header>
+		<h1 id="titulo">JUEGO DEL RECICLAJE</h1>
+	    </header>
+
+		<main>
+
+		<section id="instrucciones">
+			<p>Arrastra cada residuo al contenedor correcto antes de que acabe el tiempo. ¡Suma puntos y ayuda al planeta!</p>
+		</section>
+
+		<h2 id="marcadores">
+			
+			<span>Tiempo: <span id="cont_tiempo"></span></span> <!-- Tiempo limitado -->
+			
+			<span>Puntos: <span id="cont_movimientos"></span></span> 
+		</h2>
+
+		<div id="todo">
+
+			<div class="cajaizquierda">
+				<div id="casa"   class="lugares"><img src="../img/casa.png" id="fotocasa"class="fotoslugares" alt="Casa"></div>
+				<div id="colegio" class="lugares"><img src="../img/colegio.png" id="fotocolegio" class="fotoslugares" alt="Colegio"></div>
+			</div>
+
+            <div class="basuras">
+				<div id="carton"   class="basura"><img src="../img/contCarton.png" id="contCarton" class="fotoscontenedores" alt="carton"></div>
+				<div id="plastico" class="basura"><img src="../img/contPlastico.png" id="contPlastico" class="fotoscontenedores" alt="plastico"></div>
+                <div id="vidrio" class="basura"><img src="../img/contVidrio.png" id="contVidrio" class="fotoscontenedores" alt="vidrio"></div>
+                <div id="organico" class="basura"><img src="../img/contOrganico.png" id="contOrganico" class="fotoscontenedores" alt="organico"></div>
+			</div>
+            
+            <div class="cajaderecha">
+				<div id="industria" class="lugares"><img src="../img/industria.png" id="fotoindustria" class="fotoslugares" alt="Industria"></div>
+				<div id="ciudad" class="lugares"><img src="../img/ciudad.png" id="fotociudad" class="fotoslugares" alt="Ciudad"></div>
+			</div>
+
+		</div>	
+
+
+		<button id="reset" class="btn btn-danger">Reiniciar</button>
+	</main>
+    <script src="juego.js"></script>
+
+
+	</body>
+
+</html>
+
