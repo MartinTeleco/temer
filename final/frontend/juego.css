@@ -69,7 +69,10 @@ h2#marcadores{
 .fotoslugares{
     height: 200px;
     width: 250px;
+    top: 50%; /* Centrar aproximadamente */
+    left: 50%;
 }
+
 
 .fotoscontenedores{ 
     height: 150px;
@@ -85,16 +88,71 @@ h2#marcadores{
     margin-left: 35px; /* margen a la izquierda, asi desplazo a la derecha */
 }
 
-#fotocasa, #fotocolegio{
-    margin-right: 225px;
-
-} 
-
-#fotociudad, #fotoindustria{
-    margin-left: 225px;
-}
 
 #reset{
     display: block;
     margin: auto;
+}
+
+.lugares {
+    position: relative; /* Contenedor relativo para posicionar residuos encima */
+    width: 200px; /* Ajusta según tu diseño */
+    height: 200px;
+    margin: 20px;
+    display: inline-block;
+}
+
+
+.img-residuo {
+    position: absolute; /* Posición absoluta para superposición */
+    top: 50%; /* Centrar aproximadamente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste de posición */
+    width: 60px; /* Tamaño del residuo */
+    height: auto;
+    z-index: 10; /* Asegura que estén por encima */
+}
+
+/* Estilos del popup */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+}
+
+#popup-content h2 {
+    margin: 0 0 10px 0;
+}
+
+#popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#popup-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popup-buttons button:first-child {
+    background-color: #4caf50;
+    color: white;
+}
+
+#popup-buttons button:last-child {
+    background-color: #f44336;
+    color: white;
 }
