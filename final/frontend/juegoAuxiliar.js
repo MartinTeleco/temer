@@ -1,16 +1,31 @@
 let tipos_de_basuras = ["carton", "plastico", "vidrio", "organico"];
 let basuras = [
-    { nombre: "platano", tipo: "organico", origen: "colegio" },
     { nombre: "sandwich", tipo: "organico", origen: "colegio" },
     { nombre: "dulces", tipo: "organico", origen: "colegio" },
     { nombre: "carpeta", tipo: "plastico", origen: "colegio" },
     { nombre: "libros", tipo: "carton", origen: "colegio" },
+    { nombre: "cubo", tipo: "plastico", origen: "colegio" },
 
-    { nombre: "botellaPLastico", tipo: "plastico", origen: "ciudad" },
+    { nombre: "botellaPlastico", tipo: "plastico", origen: "ciudad" },
+    { nombre: "alcohol", tipo: "vidrio", origen: "ciudad" },
+    { nombre: "bolsa", tipo: "plastico", origen: "ciudad" },
+    { nombre: "carne", tipo: "organico", origen: "ciudad" },
+    { nombre: "tetrabrick", tipo: "carton", origen: "ciudad" },
+    
 
     { nombre: "botellaCristal", tipo: "vidrio", origen: "industria" },
+    { nombre: "platano", tipo: "organico", origen: "industria" },
+    { nombre: "caca", tipo: "organico", origen: "industria" },
+    { nombre: "pipeta", tipo: "vidrio", origen: "industria" },
+    { nombre: "caja", tipo: "carton", origen: "industria" },
 
-    { nombre: "caja", tipo: "carton", origen: "casa" }
+    { nombre: "zapatos", tipo: "carton", origen: "casa" },
+    { nombre: "burger", tipo: "organico", origen: "casa" },
+    { nombre: "juguete", tipo: "plastico", origen: "casa" },
+    { nombre: "copa", tipo: "vidrio", origen: "casa" },
+    { nombre: "cereales", tipo: "carton", origen: "casa" },
+
+
 ];
 
 // Contenedores de origen
@@ -35,35 +50,52 @@ let segundos = 0;
 let temporizador = null;
 
 function comenzar_juego() {
-    
     limpiarContenedores();
 
-    for (let basura of basuras) {                           //recorro el array basuras
-        let img = document.createElement("img");            //genero un elemento img para cada residuo
-        img.src = `../img/residuos/${basura.nombre}.png`;   //le asigno una imagen al residuo
-        img.id = basura.nombre;                             // le asigno como id el nombre en el array
-        img.draggable = true;
+    // Agrupar basuras por contenedor de origen
+    const agrupadasPorOrigen = {
+        casa: basuras.filter(basura => basura.origen === "casa"),
+        colegio: basuras.filter(basura => basura.origen === "colegio"),
+        industria: basuras.filter(basura => basura.origen === "industria"),
+        ciudad: basuras.filter(basura => basura.origen === "ciudad")
+    };
 
-        img.classList.add("img-residuo");                   // Clase para estilos
+    let index = 0; // Índice para iterar las basuras
+    const intervalo = setInterval(() => {
+        let residuosAgregados = false;
 
-        arrastrar_basuras(img);
+        for (const origen in agrupadasPorOrigen) {
+            const residuos = agrupadasPorOrigen[origen];
+            if (index < residuos.length) {
+                residuosAgregados = true;
 
-        // Agregar basura al contenedor de origen
-        /*if (basura.origen === "casa") casa.appendChild(img);
-        if (basura.origen === "colegio") colegio.appendChild(img);
-        if (basura.origen === "industria") industria.appendChild(img);
-        if (basura.origen === "ciudad") ciudad.appendChild(img);*/
+                const basura = residuos[index];
+                const img = document.createElement("img");
+                img.src = `../img/residuos/${basura.nombre}.png`;
+                img.id = basura.nombre;
+                img.draggable = true;
+                img.classList.add("img-residuo");
 
-        // poner basura encima de su origen
-        const origen = document.getElementById(basura.origen); 
-        if (origen) {
-            const numResiduos = origen.querySelectorAll(".img-residuo").length;
-            img.style.position = "absolute"; // posicionamiento relativo al contenedor
-            img.style.left = `${numResiduos * 45}px`; // separo 45px entre residuos
-            img.style.top = "30"; // ajusto altura
-            origen.appendChild(img);
+                arrastrar_basuras(img);
+
+                // Agregar al contenedor correspondiente
+                const contenedor = document.getElementById(origen);
+                if (contenedor) {
+                    const numResiduos = contenedor.querySelectorAll(".img-residuo").length;
+                    img.style.position = "absolute";
+                    img.style.left = `${numResiduos * 45}px`; // Separar residuos
+                    img.style.top = "30px";
+                    contenedor.appendChild(img);
+                }
+            }
         }
-    }
+
+        if (!residuosAgregados) {
+            clearInterval(intervalo); // Detener el intervalo cuando no queden residuos
+        }
+
+        index++; // Avanzar al siguiente residuo
+    }, 3000); // Intervalo
 
     // Resetear puntuación
     puntos = 0;
@@ -72,6 +104,7 @@ function comenzar_juego() {
     // Arrancar el conteo de tiempo
     arrancar_tiempo();
 }
+
 
 function arrancar_tiempo() {
     if (temporizador) clearInterval(temporizador);
