@@ -1,0 +1,165 @@
+body {
+    background-image: url('img/recycle-background-save-earth-light-green-free-vector.jpg'); /* Reemplaza con tu imagen */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija la imagen al fondo */
+    background-repeat: no-repeat; /* Evita que se repita */
+    color: #ffffff; /* Asegúrate de que el texto sea legible */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+/* Barra de Navegacion */
+.navbar {
+    background-color: #4CAF50; /* Verde reciclaje */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #DFF6DF; /* Un tono más claro de verde */
+}
+
+/* Responsivo: Apilar los enlaces en pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+h1{
+  text-align: center;
+}
+/* Contenedor general */
+.ranking-contenedor {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Estilo del podio */
+.podio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#podio-primero, #podio-segundo, #podio-tercero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#podio-primero {
+    background-color: gold;
+    height: 170px;
+}
+
+#podio-segundo {
+    background-color: silver;
+    height: 150px;
+}
+
+#podio-tercero {
+    background-color: #cd7f32; /* Bronce */
+    height: 130px;
+}
+
+/* Elementos del podio */
+.puesto {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.jugador {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.puntos {
+    font-size: 1em;
+}
+
+/* Lista de jugadores restantes */
+.ranking-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ranking-lista li {
+    padding: 10px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ranking-lista .puesto {
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;  /* Fija el footer en la parte inferior */
+    bottom: 0;        /* Lo coloca al final de la página */
+    left: 0;          /* Alineado al borde izquierdo */
+    z-index: 1000;    /* Asegura que esté encima del contenido */
+}

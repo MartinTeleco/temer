@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "ana",
+    "password": "ana",
+    "puntos": 10
+  },
+  {
+    "nombre": "alejandro",
+    "password": "alejandro",
+    "puntos": 0
+  },
+  {
+    "nombre": "isa",
+    "password": "isa",
+    "puntos": 190
+  },
+  {
+    "nombre": "hola",
+    "password": "hola",
+    "puntos": 0
+  },
+  {
+    "nombre": "martin",
+    "password": "martin",
+    "puntos": 0
+  },
+  {
+    "nombre": "ola",
+    "password": "hola",
+    "puntos": 200
+  }
+]

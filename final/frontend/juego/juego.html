@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+  		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<title>Hora de Reciclar</title>
+		
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="juego.css">
+        <link rel="stylesheet" href="../estilos.css">
+	</head>
+	<body>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="/" class="logo">Juego de Reciclaje</a>
+                <ul class="nav-links">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/ranking">Ranking</a></li>
+                    <li><a href="/juego">Jugar</a></li>
+                    <li><a href="/mapa">Mapa</a></li>
+                </ul>
+            </div>
+        </nav>
+		<header>
+		<h1 id="titulo">¡HORA DE RECICLAR!</h1>
+	    </header>
+
+		<main>
+
+		<section id="instrucciones">
+			<p>Arrastra cada residuo al contenedor correcto antes de que acabe el tiempo. ¡Suma puntos y ayuda al planeta!</p>
+		</section>
+
+		<h2 id="marcadores">
+			
+			<span>Tiempo: <span id="cont_tiempo"></span></span> <!-- Tiempo limitado -->
+			
+			<span>Puntos: <span id="cont_movimientos"></span></span> 
+		</h2>
+
+		<div id="todo">
+
+			<div class="cajaizquierda">
+				<div id="casa"   class="lugares"><img src="/img/casa.png" id="fotocasa"class="fotoslugares" alt="Casa" draggable="false"></div>
+				<div id="colegio" class="lugares"><img src="/img/colegio.png" id="fotocolegio" class="fotoslugares" alt="Colegio" draggable="false"></div>
+			</div>
+
+            <div class="basuras">
+				<div id="carton"   class="basura"><img src="/img/contCarton.png" id="contCarton" class="fotoscontenedores" alt="carton" draggable="false"></div>
+				<div id="plastico" class="basura"><img src="/img/contPlastico.png" id="contPlastico" class="fotoscontenedores" alt="plastico" draggable="false"></div>
+                <div id="vidrio" class="basura"><img src="/img/contVidrio.png" id="contVidrio" class="fotoscontenedores" alt="vidrio" draggable="false"></div>
+                <div id="organico" class="basura"><img src="/img/contOrganico.png" id="contOrganico" class="fotoscontenedores" alt="organico" draggable="false"></div>
+			</div>
+            
+            <div class="cajaderecha">
+				<div id="industria" class="lugares"><img src="/img/industria.png" id="fotoindustria" class="fotoslugares" alt="Industria" draggable="false"></div>
+				<div id="ciudad" class="lugares"><img src="/img/ciudad.png" id="fotociudad" class="fotoslugares" alt="Ciudad" draggable="false"></div>
+			</div>
+
+		</div>	
+
+
+		<button id="reset" class="btn btn-danger">Reiniciar</button>
+	</main>
+
+	<div id="popup" class="hidden">
+		<div id="popup-content">
+			<h2>¡Felicidades!</h2>
+			<p>Has completado el juego. ¿Qué deseas hacer?</p>
+			<div id="popup-buttons">
+				<button id="replay">Reiniciar</button>
+				<button id="exit">Ver el Ranking</button>
+			</div>
+		</div>
+	</div>
+
+
+    <!-- Popup de Inicio -->
+    <div id="popup-inicio">
+        <div id="popup-content">
+            <h2>¡Bienvenido al Juego del Reciclaje!</h2>
+            <p>Por favor, introduce tu nombre y contraseña:</p>
+            <form id="formJugador">
+                <input type="text" id="nombre" placeholder="Nombre del Jugador" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <div id="botones">
+                    <button type="button" id="btnLogin">Iniciar Sesión</button>
+                    <button type="button" id="btnRegister">Registrarse</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+
+    <div id="cuenta-regresiva">
+            <h2 class="contador"></h2>
+    </div>
+	<footer class="footer bg-dark text-white text-center py-3">
+        <p>© 2024 Juego Educativo de Sostenibilidad. Todos los derechos reservados.</p>
+    </footer>
+    <script src="juego.js"></script>
+	</body>
+	
+	</html>

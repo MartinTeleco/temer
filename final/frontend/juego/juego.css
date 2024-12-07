@@ -1,0 +1,215 @@
+
+
+#todo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+h1#titulo{
+	text-align: center; 
+	font-size: 2rem;
+	padding: 10px 20px;
+	margin: 20px auto; 
+}
+
+#instrucciones{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2#marcadores{
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+  }
+
+.cajaizquierda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.cajaderecha{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+/*.basuras{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 10px; /* Espacio entre los elementos */
+    /*margin: 20px auto; /* Centra todo el contenedor */ 
+/*}*/
+
+.basuras {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-template-rows: auto auto; /* Dos filas */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 20px; /* Espaciado entre contenedores */
+    width: 50%; /* Ajusta el ancho total */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.fotoslugares{
+    height: 200px;
+    width: 250px;
+    top: 50%; /* Centrar aproximadamente */
+    left: 50%;
+}
+
+
+.fotoscontenedores{ 
+    height: 150px;
+    width: 150px;
+}
+
+#contOrganico{
+    height: 100px;
+    width: 100px;
+}
+
+#organico {
+    margin-left: 35px; /* margen a la izquierda, asi desplazo a la derecha */
+}
+
+
+#reset{
+    display: block;
+    margin: auto;
+}
+
+.lugares {
+    position: relative; /* Contenedor relativo para posicionar residuos encima */
+    width: 200px; /* Ajusta según tu diseño */
+    height: 200px;
+    margin: 20px;
+    display: inline-block;
+}
+
+
+.img-residuo {
+    position: absolute; /* Posición absoluta para superposición */
+    top: 50%; /* Centrar aproximadamente */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Ajuste de posición */
+    width: 60px; /* Tamaño del residuo */
+    height: auto;
+    z-index: 10; /* Asegura que estén por encima */
+}
+
+/* Estilos del popup */
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+}
+
+#popup-content h2 {
+    margin: 0 0 10px 0;
+}
+
+#popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#popup-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#popup-buttons button:first-child {
+    background-color: #4caf50;
+    color: white;
+}
+
+#popup-buttons button:last-child {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Pop up inicio*/
+/* Popup de inicio */
+#popup-inicio {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1000;
+}
+ 
+#popup-inicio input {
+    margin-top: 10px;
+    padding: 8px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+ 
+#popup-inicio button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilos para la cuenta regresiva */
+#cuenta-regresiva {
+    position: fixed;
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste exacto al centro */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: none; /* Inicialmente está oculto, se mostrará durante la cuenta regresiva */
+}
+
+.contador {
+    font-size: 50px;
+    color: #ffcc00;
+    font-weight: bold;
+}

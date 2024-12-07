@@ -1,0 +1,22 @@
+.description h4 {
+    font-family: 'Arial Black', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.description p {
+    color: #555;
+}
+
+.accion {
+    background-color: #f9f9f9;
+    border-left: 5px solid #28a745;
+}
+
+.sostenibilidad-img {
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+    max-height: 200px; /* Limita la altura para evitar que sea demasiado grande */
+    object-fit: cover; /* Asegura que la imagen se recorte si es necesario */
+    margin: 0 auto; /* Centra la imagen */
+    display: block; /* Centra la imagen si está en línea */
+}

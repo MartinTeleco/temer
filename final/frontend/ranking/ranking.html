@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+    <link rel="stylesheet" href="ranking.css">
+    <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">Juego de Reciclaje</a>
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/ranking">Ranking</a></li>
+                <li><a href="/juego">Jugar</a></li>
+                <li><a href="/mapa">Mapa</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1> RANKING DE JUGADORES </h1>
+    
+    <div class="ranking-contenedor">
+        <!-- Podio -->
+        <div class="ranking-contenedor">
+            <!-- Podio -->
+            <div class="podio">
+                <div id="podio-segundo">
+                    <div class="jugador"></div>
+                    <div class="puntos"></div>
+                </div>
+                <div id="podio-primero">
+                    <div class="jugador"></div>
+                    <div class="puntos"></div>
+                </div>
+                <div id="podio-tercero">
+                    <div class="jugador"></div>
+                    <div class="puntos"></div>
+                </div>
+            </div>
+        
+            <!-- Lista de jugadores restantes -->
+            <ul class="ranking-lista"></ul>
+        </div>
+        
+    </div>
+    <footer class="footer bg-dark text-white text-center py-3">
+        <p>© 2024 Juego Educativo de Sostenibilidad. Todos los derechos reservados.</p>
+    </footer>
+    <script src="ranking.js"></script>
+</body>
+</html>

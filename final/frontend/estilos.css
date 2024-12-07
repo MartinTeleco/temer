@@ -1,53 +1,77 @@
-/* Estilos generales */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #e9f7ef, #d4efdf)!important;
-    color: #333;
+html, body {
+    height: 100%; /* Hacer que el body ocupe toda la altura de la ventana */
+    margin: 0;    /* Eliminar márgenes predeterminados */
+    padding: 0;   /* Eliminar relleno predeterminado */
+    background-color: #bdd69b;
 }
 
-/* Estilos del encabezado */
-.encabezado {
-    text-align: center;
-    background-color: #2ecc71;
+/* Asegúrate de que el contenedor principal ocupe al menos la altura de la ventana */
+#content {
+    min-height: 100%; /* Ocupa toda la altura disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra de Navegacion */
+.navbar {
+    background-color: #4CAF50; /* Verde reciclaje */
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: white;
-    padding: 20px 10px;
-}
-
-.titulo {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-/* Estilos del contenido principal */
-.main-content {
-    text-align: center;
-    padding: 40px 20px;
-    /*background-color: blue;*/
-}
-
-.description {
-    margin-bottom: 30px;
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-/* Estilos de los botones */
-.buttons a {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
     text-decoration: none;
-    display: inline-block;
 }
 
-/* Estilos del pie de página */
-.footer {
-    background-color: #27ae60;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #DFF6DF; /* Un tono más claro de verde */
+}
+
+/* Responsivo: Apilar los enlaces en pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* Footer */
+footer {
+    background-color: black;
     color: white;
     text-align: center;
-    padding: 15px 10px;
-    position: absolute;
+    padding: 10px 0;
     width: 100%;
-    bottom: 0;
+    bottom: 0;        /* Lo coloca al final de la página */
+    left: 0;          /* Alineado al borde izquierdo */
+    margin-top: auto; /* Empuja el footer hacia abajo cuando el contenido es pequeño */
 }
